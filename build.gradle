@@ -29,8 +29,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-// https://mvnrepository.com/artifact/com.h2database/h2
-	implementation 'com.h2database:h2:2.1.214'
+	// https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+	implementation 'com.mysql:mysql-connector-j:8.0.31'
 }
 
 tasks.named('test') {
