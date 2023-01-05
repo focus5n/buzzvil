@@ -1,6 +1,5 @@
 package com.buzzvil.rewardserver.controller;
 
-import com.buzzvil.rewardserver.model.dto.ad.AdDtoIn;
 import com.buzzvil.rewardserver.model.dto.ad.AdDtoOut;
 import com.buzzvil.rewardserver.model.entity.ad.AdEntityIn;
 import lombok.extern.slf4j.Slf4j;
@@ -10,21 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-public class RewardController {
+public class TestController {
 
-    @GetMapping("/request-ad")
-    public AdDtoOut ad(@ModelAttribute AdDtoIn input) {
+    @GetMapping("/get-test")
+    public TestOut test(@ModelAttribute TestIn input) {
 
         /* DTO to Entity */
-        AdEntityIn entityIn = new AdEntityIn.AdBuilder(input).build();
-        System.out.println(entityIn);
+
 
         /* Service */
 
         /* Entity to DTO */
-        AdDtoOut output = new AdDtoOut();
+        TestOut output = new TestOut();
 
         return output;
     }
-
 }

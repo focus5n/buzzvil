@@ -1,6 +1,6 @@
 package com.buzzvil.rewardserver.repository;
 
-import com.buzzvil.rewardserver.model.entity.AdEntityIn;
+import com.buzzvil.rewardserver.model.entity.ad.AdEntityIn;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

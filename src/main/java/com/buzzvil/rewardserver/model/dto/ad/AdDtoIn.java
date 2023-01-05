@@ -1,4 +1,4 @@
-package com.buzzvil.rewardserver.model.dto;
+package com.buzzvil.rewardserver.model.dto.ad;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.buzzvil.rewardserver.model.entity;
+package com.buzzvil.rewardserver.model.entity.ad;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

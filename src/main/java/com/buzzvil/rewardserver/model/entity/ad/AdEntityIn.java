@@ -1,7 +1,7 @@
-package com.buzzvil.rewardserver.model.entity;
+package com.buzzvil.rewardserver.model.entity.ad;
 
 import com.buzzvil.rewardserver.common.CommonBuilder;
-import com.buzzvil.rewardserver.model.dto.AdDtoIn;
+import com.buzzvil.rewardserver.model.dto.ad.AdDtoIn;
 import jakarta.persistence.*;
 import lombok.Getter;
 
