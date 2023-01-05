@@ -1,7 +1,7 @@
-package com.buzzvil.rewardserver.entity;
+package com.buzzvil.rewardserver.model.entity;
 
 import com.buzzvil.rewardserver.common.CommonBuilder;
-import com.buzzvil.rewardserver.dto.AdDto;
+import com.buzzvil.rewardserver.model.dto.AdDtoIn;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -13,7 +13,7 @@ import lombok.Getter;
         sequenceName = "ADS_SEQ",
         allocationSize = 1
 )
-public class AdEntity {
+public class AdEntityIn {
 
     @Id
     @GeneratedValue(
@@ -45,10 +45,10 @@ public class AdEntity {
     private int reward;
 
     /* Constructor */
-    public AdEntity() {}
+    public AdEntityIn() {}
 
     /* Builder */
-    private AdEntity(AdBuilder builder) {
+    private AdEntityIn(AdBuilder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.imageUrl = builder.imageUrl;
@@ -62,7 +62,7 @@ public class AdEntity {
     /**
      * AdEntity Builder
      */
-    public static class AdBuilder implements CommonBuilder<AdEntity> {
+    public static class AdBuilder implements CommonBuilder<AdEntityIn> {
         private final Integer id;
         private final String name;
         private final String imageUrl;
@@ -73,21 +73,21 @@ public class AdEntity {
         private final int reward;
 
         /* Constructor */
-        public AdBuilder(AdDto adDto) {
-            this.id = adDto.getId();
-            this.name = adDto.getName();
-            this.imageUrl = adDto.getImageUrl();
-            this.landingUrl = adDto.getLandingUrl();
-            this.weight = adDto.getWeight();
-            this.targetCountry = adDto.getTargetCountry();
-            this.targetGender = adDto.getTargetGender();
-            this.reward = adDto.getReward();
+        public AdBuilder(AdDtoIn adDtoIn) {
+            this.id = adDtoIn.getId();
+            this.name = adDtoIn.getName();
+            this.imageUrl = adDtoIn.getImageUrl();
+            this.landingUrl = adDtoIn.getLandingUrl();
+            this.weight = adDtoIn.getWeight();
+            this.targetCountry = adDtoIn.getTargetCountry();
+            this.targetGender = adDtoIn.getTargetGender();
+            this.reward = adDtoIn.getReward();
         }
 
         /* Build */
         @Override
-        public AdEntity build() {
-            return new AdEntity(this);
+        public AdEntityIn build() {
+            return new AdEntityIn(this);
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.buzzvil.rewardserver.dto;
+package com.buzzvil.rewardserver.model.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-public class AdDto {
+public class AdDtoIn {
 
     // 광고 고유식별자
     private Integer id;
